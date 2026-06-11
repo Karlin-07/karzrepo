@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Book Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Global Book Library</h1>
+      <p>Browse every book detail and order online from anywhere.</p>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="search-panel">
+      <div class="search-field">
+        <label for="searchInput">Search books</label>
+        <input id="searchInput" type="search" placeholder="Search by title, author, category or ISBN" />
+      </div>
+      <div class="filters">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <div class="book-list" id="bookList"></div>
+
+      <aside class="cart-panel">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div class="cart-summary">
+          <span>Total:</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button id="checkoutButton" class="btn btn-primary">Checkout</button>
+      </aside>
+    </section>
+  </main>
+
+  <div class="modal-overlay hidden" id="detailModal">
+    <div class="modal-content">
+      <button class="close-button" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p>Global Book Library • Your online source for books, details, and secure checkout.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
